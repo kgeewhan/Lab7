@@ -40,3 +40,7 @@ document.querySelector('header img').addEventListener('click', () => {
   history.pushState(settings, '', '#settings');
   setState(settings);
 });
+
+window.onpopstate = function(event) {
+  setState(event.state);
+}
